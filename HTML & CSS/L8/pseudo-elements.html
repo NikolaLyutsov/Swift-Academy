@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo-Elements</title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .first-paragraph::first-letter {
+            color: red;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        .second-paragraph::first-line {
+            color: green;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        h1:before,h1:after {
+            content:url(images/arrow-left.png);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        h1:after {
+            content:url(images/arrow-right.png);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* h1:before,
+        h1:after {
+            content: "";
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            height: 12px;
+            width: 12px;
+            border-color: transparent red red transparent;
+            border-width: 0 3px 3px 0;
+            border-style: solid;
+            transform: rotate(135deg) translateY(3px)
+        }
+
+        h1:after {
+            transform: rotate(-45deg) translateY(-3px);
+            left: 3px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>TITLE</h1>
+
+
+    <p class="first-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus enim magna, consectetur non diam eget, blandit commodo
+        nibh. Donec id ex nibh. Fusce a tristique elit. Nam tempor elit vitae lectus ultricies, vel hendrerit leo consectetur.
+        Ut vestibulum tellus sed fermentum convallis. Suspendisse non neque sollicitudin, sollicitudin augue maximus, rhoncus
+        leo. Ut blandit est sapien, eu aliquam mi facilisis id. Proin fringilla suscipit egestas. Donec sodales nisi nec
+        luctus pellentesque. Nulla eget velit placerat, molestie metus quis, semper diam. Aenean id luctus enim, in convallis
+        mauris. Morbi lacus nisi, fringilla at felis eget, auctor tempus nulla. Etiam fringilla libero ac porta molestie.
+        Proin felis nunc, vulputate id odio nec, accumsan placerat erat. Mauris luctus posuere lorem in fermentum. Nam nunc
+        nulla, mattis id malesuada id, sollicitudin a est.
+    </p>
+
+    <p class="second-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus enim magna, consectetur non diam eget, blandit commodo
+        nibh. Donec id ex nibh. Fusce a tristique elit. Nam tempor elit vitae lectus ultricies, vel hendrerit leo consectetur.
+        Ut vestibulum tellus sed fermentum convallis. Suspendisse non neque sollicitudin, sollicitudin augue maximus, rhoncus
+        leo. Ut blandit est sapien, eu aliquam mi facilisis id. Proin fringilla suscipit egestas. Donec sodales nisi nec
+        luctus pellentesque. Nulla eget velit placerat, molestie metus quis, semper diam. Aenean id luctus enim, in convallis
+        mauris. Morbi lacus nisi, fringilla at felis eget, auctor tempus nulla. Etiam fringilla libero ac porta molestie.
+        Proin felis nunc, vulputate id odio nec, accumsan placerat erat. Mauris luctus posuere lorem in fermentum. Nam nunc
+        nulla, mattis id malesuada id, sollicitudin a est.
+    </p>
+</body>
+
+</html>

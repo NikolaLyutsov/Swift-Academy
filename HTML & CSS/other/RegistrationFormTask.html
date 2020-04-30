@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            position: relative;
+            margin: 0 auto;
+            top: 50%;
+            margin-top: 100px;
+            width: 350px;
+            font-family: 'Open Sans';
+            padding: 30px;
+            background-color: #ebebeb;
+            font-size: 16px;
+            box-shadow: 2px 2px 5px #8b8787;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .Content-wrap,
+        h1 {
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .Email,
+        .Name,
+        .Password,
+        .Register {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .Email label,
+        .Name label,
+        .Password label {
+            flex: 1 0 75px;
+            max-width: 75px;
+            text-align: left;
+        }
+
+        .Email input,
+        .Name input,
+        .Password input {
+            flex: 1 0 215px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .Register {
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+        }
+
+        #RegisterButton {
+            height: 40px;
+            width: 100px;
+        }
+
+        p,
+        a {
+            width: 250px;
+        }
+
+        a {
+            color: blue;
+        }
+
+        @media (max-width: 576px) {
+
+            .Email label,
+            .Name label,
+            .Password label,
+            .Register p {
+                position: relative;
+                bottom: 18px;
+                left: 75px;
+            }
+
+            .Register p {
+                text-align: center;
+            }
+
+            .Register input {
+                position: relative;
+                top: 30px;
+                right: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Registration</h1>
+        <form action="#">
+            <div class="Content-wrap">
+                <input type="radio" id="Personal" name="Category">
+                <label for="Personal">Personal</label>
+
+                <input type="radio" id="Company" name="Category" checked>
+                <label for="Company">Company</label>
+            </div>
+            <div class="Content-wrap Email">
+                <label for="Email">Email</label>
+                <input type="email" placeholder=" Email" id="Email">
+            </div>
+            <div class="Content-wrap Name">
+                <label for="Name">Name</label>
+                <input type="text" placeholder=" Name" id="Name">
+            </div>
+            <div class="Content-wrap Password">
+                <label for="Password">Password</label>
+                <input type="password" placeholder=" Password" id="Password">
+            </div>
+            <div class="Content-wrap">
+                <input type="radio" id="Female" name="gender">
+                <label for="Female">Female</label>
+                <input type="radio" id="Male" name="gender" checked>
+                <label for="Male">Male</label>
+            </div>
+            <div class="Content-wrap Register">
+                <p>By clicking "Register", you agree on our <a href="#">Terms and conditions</a></p>
+                <input type="button" value="Register" id="RegisterButton">
+            </div>
+        </form>
+    </section>
+</body>
+</html>

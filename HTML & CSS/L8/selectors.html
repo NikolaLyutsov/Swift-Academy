@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        body {
+            color: #333;
+        }
+
+        h3 {
+            text-transform: capitalize;
+        }
+
+        section {
+            border-bottom: 1px solid gray;
+        }
+
+        /* descendant selector*/
+
+        #descendant-selector ul li {
+            color: orangered
+        }
+
+        /* adjacent - съседен */
+
+        #adjacent-selector span + strong {
+            color: forestgreen;
+            text-transform: uppercase;
+            font-size: 200%;
+        }
+
+        #tilda-selector span ~ strong {
+            color: forestgreen;
+            text-transform: uppercase;
+            font-size: 200%;
+        }
+
+        /* direct child selector */
+        
+        #direct-child-selector p > span {
+            color: red;
+        }
+
+        #direct-child-selector div > strong {
+            color: red;
+        }
+
+        /* pseudo classes */ 
+
+        #pseudo-classes li:only-child {
+            color: green;
+        }
+
+        #pseudo-classes li:first-child,
+        #pseudo-classes li:last-child {
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Selectors</h1>
+    <section id="descendant-selector">
+        <h2>X Y</h2>
+        <h3>descendant selector</h3>
+        <ul>
+            <li>
+                First Level List
+                <ul>
+                    <li>Second Level List</li>
+                    <li>Second Level List</li>
+                    <li>
+                        Second Level List
+                        <ul>
+                            <li>Third Level List</li>
+                            <li>Third Level List</li>
+                            <li>Third Level List</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                First Level List
+            </li>
+            <li>First Level List</li>
+        </ul>
+    </section>
+    <section id="adjacent-selector">
+        <h2>X + Y</h2>
+        <h3>adjacent selector</h3>
+       <p>
+        <span>Lorem </span>
+        <strong> ipsum </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <span>sit </span>
+        <span>amet</span>
+        <strong>, consectetur </strong>
+        <span>adipiscing </span>
+        <strong> elit</strong>
+       </p>
+    </section>
+    <section id="tilda-selector">
+        <h2>X ~ Y</h2>
+        <h3>tilda selector</h3>
+       <p>
+        <span>Lorem </span>
+        <strong> ipsum </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <strong>dolor </strong>
+        <span>sit </span>
+        <span>amet</span>
+        <strong>, consectetur </strong>
+        <span>adipiscing </span>
+        <strong> elit</strong>
+       </p>
+    </section>
+    <section id="direct-child-selector">
+        <h2>X > Y</h2>
+        <h3>direct child selector</h3>
+        <p>
+            <span>Lorem </span>
+            <strong> ipsum </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <span>sit </span>
+            <span>amet</span>
+            <strong>, consectetur </strong>
+            <span>adipiscing </span>
+            <strong> elit</strong>
+           </p>
+           <div>
+            <span>Lorem </span>
+            <strong> ipsum </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <strong>dolor </strong>
+            <span>sit </span>
+            <span>amet</span>
+            <strong>, consectetur </strong>
+            <span>adipiscing </span>
+            <strong> elit</strong>
+           </div>
+    </section>
+    <section id="pseudo-classes">
+        <h2>Pseudo selectors</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+        <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+        </ul>
+    </section>
+</body>
+</html>

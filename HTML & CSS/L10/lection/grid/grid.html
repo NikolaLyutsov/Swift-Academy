@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        color: #333;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-rows: 4em 1fr 4em;
+      }
+
+      .grid-container > * {
+        border: 1px dashed lightslategray;
+        text-align: center;
+      }
+
+      header,
+      footer {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+
+      main {
+          grid-column: 2/3
+      }
+    </style>
+  </head>
+  <body class="grid-container">
+    <header>
+      <p>Header</p>
+    </header>
+    <main>
+      <p>Main</p>
+    </main>
+    <aside>
+      <p>Aside</p>
+    </aside>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Units &amp; media queries</title>
+    <link rel="stylesheet" href="media-queries.css">
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        html {
+            font-size: 20px;/*for rems*/
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            font-size: 15px; /*for ems*/
+        }
+        
+        h1{
+            font-size: 20px;
+        }
+
+        div {
+            border: 1px solid navy;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .cm {
+            height: 2.54cm;
+            width: 2.54cm;
+        }
+
+        .mm {
+            height: 25.4mm;
+            width: 25.4mm;
+        }
+
+        .in {
+            height: 1in;
+            width: 1in;
+        }
+
+        .pt {
+            height: 72pt;
+            width: 72pt;
+        }
+
+        .pc {
+            height: 6pc;
+            width: 6pc;
+        }
+
+        .em {
+            height: 5em;
+            width: 5em;
+        }
+
+        .rem {
+            height: 5rem;
+            width: 5rem;
+        }
+
+        .vw {
+            height: 10vw;
+            width: 10vw;
+        }
+
+        .vh {
+            height: 10vh;
+            width: 10vh
+        }
+
+        .parent-for-percent {
+            position: relative;
+            height: 100px;
+            width: 100px;
+        }
+
+        .percent {
+            height: 30%;
+            width: 30%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .ch {
+            width: 10ch;
+        }
+
+        .courier {
+            font-family: 'Courier New', Courier, monospace
+            }
+        .helvetica {
+            font-family: Helvetica, sans-serif
+        }
+
+        .georgia {
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+
+        .vmin {
+            height: 10vmin;
+            width: 10vmin
+        }
+
+        .vmax {
+            height: 10vmax;
+            width: 10vmax
+        }
+
+        /* https://99designs.com/blog/tips/ppi-vs-dpi-whats-the-difference/ */
+        /* https://dev.to/fullstack_to/units-in-css-em-rem-pt-px-vw-vh-vmin-vmax-ex-ch-53l0 */
+        /* https://www.eizo.com/library/basics/pixel_density_4k/ */
+
+    </style>
+</head>
+<body>
+    <p class="for-testing">Measure font-size</p>
+
+    <section class="absolute-units">
+        <h1>Absolute Units</h1>
+        <div class="cm">2.54 Centimeters</div>
+        <div class="mm">25.4 Millimeters</div>
+        <div class="in">1 Inch <br> 6.0005 picas</div>
+        <div class="pt">72 Points</div>
+        <div class="pc">6 picas</div>
+    </section>
+    <section>
+        <h1>Relative Units</h1>
+        <div class="em">2 em</div>
+        <div class="rem">2 rem</div>
+        <div class="vw">10 vw in height and width</div>
+        <div class="vh">10 vh in height and width</div>
+        <div class="parent-for-percent">
+            Parent element 100px x 100px
+            <div class="percent">30 percent of parent</div>
+        </div>
+        <div class="ch courier">1234567890</div>
+        <div class="ch helvetica">1234567890</div>
+        <div class="ch georgia">1234567890</div>
+        <div class="vmin ">vmin</div>
+        <div class="vmax">vmax</div>
+    </section>
+</body>
+</html>

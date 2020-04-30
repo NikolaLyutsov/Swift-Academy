@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform origin</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <style>
+            label {
+                display: inline-block;
+                width: 60px;
+            }
+
+            #div1 {
+                position: relative;
+                height: 200px;
+                width: 200px;
+                margin: 50px;
+                /* padding: 10px; */
+                border: 1px dashed royalblue;
+            }
+
+            #div2 {
+                width: 100px;
+                height: 100px;
+                padding: 50px;
+                position: absolute;
+                background-color: royalblue;
+                color:#fff;
+                transform: rotate(40deg);
+                transform-origin: 50% 50%;
+                -ms-transform: rotate(0deg);
+                /* IE 9 */
+                -ms-transform-origin: 50% 50%;
+                /* IE 9 */
+                -webkit-transform: rotate(0deg);
+                /* Safari 3-8 */
+                -webkit-transform-origin: 50% 50%;
+                /* Safari 3-8 */
+            }
+        </style>
+       
+    </head>
+
+    <body>
+
+        <div id="div1">
+            <div id="div2">Swift Academy</div>
+        </div>
+
+        <label for="">Rotate:</label>
+        <input type="number" min="-360" max="360" value="0" onchange="changeRot(this.value)" /> transform: rotateY:(
+        <span id="persp">0</span>);
+        <br>
+        <br> 
+        <label for="">X-axis:</label>
+        <input type="number" min="-100" max="200" value="50" onchange="changeOrg()" id="ox" />
+        <br>
+        <label for=""> Y-axis:</label>
+        <input type="number" min="-100" max="200" value="50" onchange="changeOrg()" id="oy" /> transform-origin:
+        <span id="origin">50% 50%</span>;
+        <script>
+            function changeRot(value) {
+                document.getElementById('div2').style.transform = "rotate(" + value + "deg)";
+                document.getElementById('div2').style.msTransform = "rotate(" + value + "deg)";
+                document.getElementById('div2').style.webkitTransform = "rotate(" + value + "deg)";
+                document.getElementById('div2').style.MozTransform = "rotate(" + value + "deg)";
+                document.getElementById('div2').style.OTransform = "rotate(" + value + "deg)";
+                document.getElementById('persp').innerHTML = value + "deg";
+            }
+
+            function changeOrg() {
+                var x = document.getElementById('ox').value;
+                var y = document.getElementById('oy').value;
+                document.getElementById('div2').style.transformOrigin = x + '% ' + y + '%';
+                document.getElementById('div2').style.msTransformOrigin = x + '% ' + y + '%';
+                document.getElementById('div2').style.webkitTransformOrigin = x + '% ' + y + '%';
+                document.getElementById('div2').style.MozTransformOrigin = x + '% ' + y + '%';
+                document.getElementById('div2').style.OTransformOrigin = x + '% ' + y + '%';
+                document.getElementById('origin').innerHTML = x + "% " + y + "%";
+            }
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

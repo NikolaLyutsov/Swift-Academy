@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inline block elements</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+      }
+
+      section {
+          border-top: 1px solid #ccc;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 5px;
+      }
+
+      span {
+        border-width: 1px;
+        border-style: dashed;
+      }
+
+      div {
+        border-width: 1px;
+        border-style: solid;
+      }
+
+      #standard-elements {
+          background-color: #ff45000d;
+      }
+
+      #standard-elements h2{
+        color: orangered
+      }
+
+      #standard-elements div,
+      #standard-elements span {
+        height: 100px;
+        width: 100px;
+        padding: 5px;
+        margin: 10px;
+        border-color: orangered;
+      }
+
+      #inline-elements {
+        background-color: #228c220d
+      }
+
+      #inline-elements h2 {
+          color: forestgreen
+      }
+
+      #inline-elements span {
+        border-color: forestgreen;
+        height: 30000000000px;
+        width: 30000000000px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 30px 30px;
+      }
+
+      #block-elements {
+          background-color: #4169e10d
+      }
+
+      #block-elements h2 {
+        color: royalblue;
+      }
+
+      #block-elements div {
+          border-color: royalblue;
+          height: 50px;
+          width: 25%;
+          padding: 5px;
+          margin: 1%;
+      }
+
+      #inline-block *:not(h2) {
+          display: inline-block;
+          vertical-align: top;
+          min-height: 50px;
+          width: 80%;
+          min-width: 150px;
+          padding: 5px 10px;
+          margin: 10px;
+      }
+
+      #inline-block div {
+          border-color: royalblue
+      }
+
+      #inline-block span {
+          border-color: forestgreen
+      }
+
+      #inline-block p {
+          border-left: 1px solid #ccc
+      }
+
+      #inline-block .double {
+          min-height: 100px;
+          min-width: 300px;
+      }
+
+      .easter-egg {
+        display: block!important;
+        border: none!important;
+        padding: 0!important;
+        margin: 0!important;
+        min-height: unset!important;
+        max-width: 0!important;
+        visibility: hidden;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Inline, block and inline-block elements</h1>
+      <strong>NB!</strong> всички елементи са със стойност за box-sizing:<strong>
+        border-box
+      </strong>
+      <section id="standard-elements">
+        <h2>
+          Blocks and inline elements without manipulation
+        </h2>
+        <div>
+          &lt;div&gt; с размери 100px x 100px
+        </div>
+        <div>
+          &lt;div&gt; с размери 100px x 100px
+        </div>
+        <span>
+          &lt;span&gt; с размери 100px x 100px
+        </span>
+        <div>
+          &lt;div&gt; с размери 100px x 100px
+        </div>
+        <span>
+          &lt;span&gt; с размери 100px x 100px
+        </span>
+        <span>
+          &lt;span&gt; с размери 100px x 100px
+        </span>
+        <p>
+          При инспектиране на елементите обърнете внимание, че блоковите
+          елементи въпреки зададените размери заемат целия ред
+        </p>
+      </section>
+      <section id="inline-elements">
+        <h2>Inline Elements with padding and margin</h2>
+        <span>&lt;span&gt;</span>
+        <span>&lt;span&gt;</span>
+        <span>&lt;span&gt;</span>
+        <p>При работа с inline елементи трябва да имате предвид</p>
+        <ul>
+          <li>
+            зададени height &amp; width <strong>НЕ ОКАЗВАТ ВЛИЯНИЕ</strong>
+          </li>
+          <li>
+            застъпването на h2 отгоре и текста тук се получава по две причини
+            <ul>
+              <li>
+                зададеният margin по 30px от всяка страна се прилага само отляво
+                и отдсяно
+              </li>
+              <li>
+                зададеният padding по 30px от всяка страна се прилага от всички
+                страни но browser-a
+                <strong>не позиционира елемента отгоре и долу</strong>
+                <br />според началото и края на border-a
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="block-elements">
+          <h2>Block Elements with padding and margin</h2>
+        <div>
+          &lt;div&gt;
+        </div>
+        <div>
+          &lt;div&gt;
+        </div>
+        <div>
+          &lt;div&gt;
+        </div>
+        <p>Приложените върху блокови елементи - height, width, padding, margin оказват влияние, но без промяна на пропърти <strong>display</strong> на този етап не могат да се подредят един до друг</p>
+      </section>
+      <section id="inline-block">
+        <h2>display: inline-block</h2>
+        <div> &lt;div&gt;</div>
+        <span> &lt;span&gt;</span>
+        <div class="double"> &lt;div&gt;</div>
+        <span  class="double"> &lt;span&gt;</span>
+        <div> &lt;div&gt;</div>
+        <div class="easter-egg"></div>
+        <p class="double">Независимо от това върху какъв елемент прилагаме inline-block, height,width, padding и margin оказват влияние.</p>
+        <p>Ако има достатъчно място за елементите те ще се подредят един след друг на един ред.</p>
+        <p>Когато мястото не стигне ще паднат на нов ред.</p>
+        <p >Tези параграфи също са inline-block : )</p>
+      </section>
+    </main>
+  </body>
+</html>

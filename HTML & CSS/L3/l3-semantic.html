@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        * {
+            text-align: center;
+        }
+
+        header {
+            width: 100%;
+            height: 10%;
+            border-bottom: 1px solid #bbb
+        }
+
+        nav {
+            height: 10%;
+        }
+
+        footer {
+            width: 100%;
+            height: 10%;
+            border-top: 1px solid #bbb
+        }
+
+        main {
+            height: 80%;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr 20%;
+        }
+
+        main > * {
+            border: 1px solid royalblue;
+        }
+
+        section, article {
+            grid-column: 1/2
+        }
+
+        aside {
+            grid-column: 2/3;
+            grid-row: 1/3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <nav>Navigation</nav>
+    <main>
+        <section>
+            <h2>Section 1</h2>
+        </section>
+        <article>
+            <h2>Article 1</h2>
+        </article>
+        <aside>
+            <h3>Aside</h3>
+        </aside>
+    </main>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+
+</body>
+
+</html>

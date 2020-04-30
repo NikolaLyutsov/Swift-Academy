@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex</title>
+    <link rel="stylesheet" href="flex-styles.css">
+</head>
+
+<body class="flex column">
+    <header>
+        <div class="header-content-wrap">
+            <div class="logo-wrap">
+                <h1>Logo</h1>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+
+
+            <nav class="nav-menu">
+                <ul class="nav-first-level">
+                    <li>
+                        <a href="/">Lorem link</a>
+                        <div class="nav-second-level-wrap">
+                            <ul class="nav-second-level">
+                                <li>Lorem 1</li>
+                                <li>Lorem 2</li>
+                                <li>Lorem 3</li>
+                            </ul>
+                        </div>
+                    </li><!--
+                     --><li>
+                        <a href="/">Ipsum link</a>
+                        <div class="nav-second-level-wrap">
+                            <ul class="nav-second-level">
+                                <li>Ipsum 1</li>
+                                <li>Ipsum 2</li>
+                                <li>Ipsum 3</li>
+                                <li>Ipsum 4</li>
+                                <li>Ipsum 5</li>
+                            </ul>
+                        </div>
+                    </li><!--
+                     --><li>
+                        <a href="/">Dolor link</a>
+                        <div class="nav-second-level-wrap">
+                            <ul class="nav-second-level">
+                                <li>Dolor 1</li>
+                                <li>Dolor 2</li>
+
+                            </ul>
+                        </div>
+                    </li><!--
+                    --><li>
+                        <a href="/">Augue link</a>
+                        <div class="nav-second-level-wrap">
+                            <ul class="nav-second-level">
+                                <li>Augue 1</li>
+                                <li>Augue 2</li>
+                                <li>Augue 3</li>
+                            </ul>
+                        </div>
+                    </li><!--
+                    --><li>
+                        <a href="/">Estas link</a>
+                        <div class="nav-second-level-wrap">
+                            <ul class="nav-second-level">
+                                <li>Lorem 1</li>
+                                <li>Lorem 2</li>
+                                <li>Lorem 3</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- <main class="flex flex-wrap">
+        <section class="major-content">
+            <div class="items-wrap flex">
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>215 x 315 px</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>215 x 315 px</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>215 x 315 px</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>215 x 315 px</p>
+                    </div>
+                </div>
+            </div>
+            <p class="description-wrap">
+                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt.
+            </p>
+        </section>
+        <section class="minor-content">
+            <article class="item-wrap flex">
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>180 x 150px</p>
+                    </div>
+                </div>
+                <div class="item-content">
+                    <h3>
+                        Fusce vitae placerat arcu. Nulla facilisi.
+                    </h3>
+                    <p>
+                        Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut fermentum magna tortor id nulla. Nunc at placerat
+                        libero.
+                        <a href="">Lorem ipsum dolor</a>Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut
+                        fermentum magna tortor id nulla. Nunc at placerat libero.
+                    </p>
+                    <a class="read-more" href="/">Read more</a>
+                </div>
+            </article>
+            <article class="item-wrap flex">
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>180 x 150px</p>
+                    </div>
+                </div>
+                <div class="item-content">
+                    <h3>
+                        Fusce vitae placerat arcu. Nulla facilisi.
+                    </h3>
+                    <p>
+                        Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut fermentum magna tortor id nulla. Nunc at placerat
+                        libero.
+                        <a href="">Lorem ipsum dolor</a>Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut
+                        fermentum magna tortor id nulla. Nunc at placerat libero.libero.Nunc at placerat libero.Nunc at placerat
+                        libero.Nunc.
+                    </p>
+                    <a class="read-more" href="/">Read more</a>
+                </div>
+            </article>
+            <article class="item-wrap flex">
+                <div class="image-holder">
+                    <div class="item-image">
+                        <p>180 x 150px</p>
+                    </div>
+                </div>
+                <div class="item-content">
+                    <h3>
+                        Fusce vitae placerat arcu. Nulla facilisi.
+                    </h3>
+                    <p>
+                        Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut fermentum magna tortor id nulla. Nunc at placerat
+                        libero.
+                        <a href="">Lorem ipsum dolor</a>Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut
+                        fermentum magna tortor id nulla. Nunc at placerat libero. ras luctus, lorem vitae pretium elementum,
+                        turpis odio imperdiet augue, ut fermentum magna tortor id nulla. Nunc at placerat libero.
+                        <a href="">Lorem ipsum dolor</a>Cras luctus, lorem vitae pretium elementum, turpis odio imperdiet augue, ut
+                        fermentum magna tortor id nulla. Nunc at placerat libero.
+                    </p>
+                    <a class="read-more" href="/">Read more</a>
+                </div>
+            </article>
+        </section>
+        <aside>
+            <h4>Categories</h4>
+            <ul class="categories-item">
+                <li>
+                    <a href="">Lorem category</a>
+                </li>
+                <li>
+                    <a href="">Lorem category</a>
+                </li>
+                <li>
+                    <a href="">Ipsum category</a>
+                </li>
+                <li>
+                    <a href="">Sit category</a>
+                </li>
+                <li>
+                    <a href="">Bla category</a>
+                </li>
+                <li>
+                    <a href="">Ipsum category</a>
+                </li>
+                <li>
+                    <a href="">Veeery very long latin quote category</a>
+                </li>
+                <li>
+                    <a href="">Ipsum dolor</a>
+                </li>
+                <li>
+                    <a href="">Sit Amet</a>
+                </li>
+                <li>
+                    <a href="">Another veeery very long latin quote category</a>
+                </li>
+                <li>
+                    <a href="">Lorem category</a>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-content-wrap">
+            <div class="copyright-wrap">
+                Copyright &copy; May 2018
+            </div>
+            <div class="info-wrap">
+                Swift Academy
+            </div>
+        </div>
+    </footer> -->
+</body>
+
+</html>

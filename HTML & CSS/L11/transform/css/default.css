@@ -1,0 +1,45 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    perspective: 500px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 276px;
+    margin: 20% auto 0 auto;
+    transition: all 1.5s linear;
+
+}
+
+div {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 276px;
+    border: 1px dashed royalblue;
+    background: transparent;
+    transition-duration: 1s, 2s, 3s;
+    opacity: 1;
+    transition-property: background, border, opacity;
+}
+
+/*transition example*/
+
+div:hover {
+    background: royalblue;
+    border: 3px solid purple;
+    opacity: 0.3;
+}
+
+

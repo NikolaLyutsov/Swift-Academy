@@ -1,0 +1,53 @@
+/*TRANSLATE*/
+
+/* img:hover {
+    -webkit-transform: translate(200px, 50px);
+    -moz-transform: translate(200px, 50px);
+    -ms-transform: translate(200px, 50px);
+    transform: translate(50px, 50px); 
+} */
+
+/*ROTATE*/
+/* 
+img:hover {
+    -webkit-transform: rotate(30deg);  
+    -moz-transform: rotate(30deg); 
+     -ms-transform: rotate(30deg); 
+         transform: rotate(30deg);  
+} */
+
+/*SCALE*/
+
+/* img:hover {
+    -webkit-transform: scale(0.75, 0.5);  
+       -moz-transform: scale(0.75, 0.5);  
+        -ms-transform: scale(0.75, 0.5);  
+            transform: scale(2) ;   
+} */
+
+/*SКEW общо*/
+
+/* img:hover {
+    -webkit-transform: skew(-40deg, 15deg);  
+       -moz-transform: skew(-40deg, 15deg);  
+        -ms-transform: skew(-40deg, 15deg); 
+            transform: skew(-40deg, 15deg);    
+} */
+
+/*SКEW X*/
+
+/* img:hover {
+    -webkit-transform: skewX(-40deg);  
+       -moz-transform: skewX(-40deg);  
+        -ms-transform: skewX(-40deg); 
+            transform: skewX(-40deg);    
+} */
+
+/*SКEW Y*/
+
+ /* img:hover {
+    -webkit-transform: skewY(15deg);  
+       -moz-transform: skewY(15deg);  
+        -ms-transform: skewY(15deg); 
+            transform: skewY(15deg);    
+}  */

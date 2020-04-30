@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MovieFair</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        img {
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Movie Fair</h1>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Poster</th>
+                <th rowspan="2">Title</th>
+                <th rowspan="2">Short review</th>
+                <th rowspan="2">Cast</th>
+                <th colspan="2">Critics Rating</th>
+            </tr>
+            <tr>
+                <th>IMDB</th>
+                <th>Rotten<br>Potatoes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://www.imdb.com/" target="_blank" title="The Irishman">
+                        <img src="img.jpg" alt="img">
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.imdb.com/" target="_top">The<br>Irishman</a>
+                </td>
+                <td>
+                    <h2>Storyline</h2>
+                    <p>Frank "The Irishman" Sheeran is a man with a lot on his mind. The former labor union high
+                        official
+                        and hitman, learned to kill<br>serving in Italy during the Second World War. He now looks back
+                        on
+                        his life and the hits that defined his mob career,<br>maintaining connections</p>
+                    <p><strong>Director</strong> <a href="#">Martin Scorseze</a></p>
+                    <p><strong>Writers</strong> <a href="#">Steven Zailian</a> (screenplay), <a href="#">Charles
+                            Brandt</a> (book)</p>
+                    <p><strong>Stars</strong> <a href="#">Robert De Niro</a>, <a href="#">Al Pacino</a>, <a href="#">Joe
+                            Pesci</a>, <a href="#">Full Cast & Crew</a></p>
+                </td>
+                <td>
+                    <p>Cast overview,<br>first billed only:</p>
+                    <p><a href="#">Robert De Niro</a><br>
+                        as Frank<br>Sheeran</p>
+                    <p><a href="#">Al Pacino</a>as<br>Jimmy Hoffa</p>
+                    <p><a href="#">Joe Pesci</a>as<br>Russel<br>Bugalino</p>
+                </td>
+                <td>
+                    <form action="#">
+                        <input type="radio" name="star" id="star5" value="star5" checked><br>
+                        <label for="star5">Five<br>Star</label><br>
+                        <input type="radio" name="star" id="star4" value="star4"><br>
+                        <label for="star4">Four<br>Star</label><br>
+                        <input type="radio" name="star" id="star3" value="star3"><br>
+                        <label for="star3">Three<br>Star</label><br>
+                        <input type="radio" name="star" id="star2" value="star2"><br>
+                        <label for="star2">Two<br>Star</label><br>
+                        <input type="radio" name="star" id="star1" value="star1"><br>
+                        <label for="star1">One<br>Star</label>
+                    </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <label for="RottenPotatoes"></label>
+                        <select name="Stars" id="RottenPotatoes">
+                            <option value="" disabled selected hidden>Please select</option>
+                            <option value="-5">-5</option>
+                            <option value="-4">-4</option>
+                            <option value="-3">-3</option>
+                            <option value="-2">-2</option>
+                            <option value="-1">-1</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot style="text-align:center">
+            <tr>
+                <td colspan="6">
+                    <form action="#">
+                        <label for="Username">
+                            <span><strong>To Login please enter your</strong></span>
+                            <input name="Username" id="Username" type="text" placeholder="Username" required>
+                        </label>
+                        <label for="Password">
+                            <span><strong>&</strong></span>
+                            <input name="Password" id="Password" type="password" placeholder="Password" required>
+                        </label>
+                        <button value="Submit">Log in</button>
+                        <p><strong>Not a member? Click </strong><a href="#">here</a> <strong> to Register.</strong></p>
+                    </form>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

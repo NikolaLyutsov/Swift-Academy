@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            font-size: 0;
+        }
+        div{
+            display: inline-block;
+            height: 100px;
+            width: 25%;
+            border: 1px solid royalblue;
+            font-size: 20px;
+            text-align: center;
+            top: 10px;
+            left: 10px;
+        }
+        .relative{
+            position: relative;
+            background-color: royalblue;
+        }
+        .absolute{
+            position: absolute;
+            border-color: orangered;
+            background-color: orangered;
+        }
+        .absolute-parent,
+        .absolute-child{
+            position: absolute;
+            top: unset;
+            left: unset;
+            bottom: 0;
+            right: 0;
+            height: 25%;
+            width: 25%;
+            background-color: red;
+        }
+        .absolute-child{
+            background-color: orangered;
+            right: unset;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>Block 1</div>
+    <!-- <div class="relative">Block 2</div> -->
+    <div class="absolute">absolute</div>
+    <div>Block 3</div>
+    <div>Block 4</div>
+    <div class="absolute-parent">
+        <div class="absolute-child"></div>
+    </div>
+</body>
+</html>

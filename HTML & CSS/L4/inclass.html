@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Simple selectors</title>
+
+    <style>
+
+      /*селектиране по таг*/
+      h1 {
+        font-weight: normal;
+      }
+
+      strong {
+        color: navy;
+      }
+
+      p strong {
+        /*селектира елемент strong който се намира в p и override-ва синьото на strong отгоре*/
+        color: red;
+      }
+
+      section {
+        border: 1px solid gray;
+        margin-bottom: 10px;
+        padding: 0 10px;
+      }
+
+      a {
+        text-decoration: none; /*премахва подчертаването на всички anchor тагове*/
+      }
+
+      /*изброяване на елементи с CSS, правилото долу ще се приложи върху всички отделени с запетая тагове*/
+      h2, h3, h4, h5, h6 {
+        font-weight: normal;
+      }
+
+      /*селектиране по class*/
+
+      .italic {
+        /*прилага този стил върху всички елементи, които имат съответния клас*/
+        font-style: italic;
+      }
+
+      .italic strong {
+        /* търси елемент strong във елемент който има клас .italic и в случая override-ва стила на шрифта */
+        font-style: normal;
+      }
+
+      strong.uppercase {
+        /* търси елемент strong, който има клас uppercase и прилага стиловете само върху него, uppercase не се прилага на h1, но хваща p в лист №3*/
+        text-transform: uppercase;
+      }
+
+	  /*селектиране по id*/
+
+	  #select-by-id h1 { /*селектора има тежест id/class/tag 101 и override-ва правилата от предната секция по класове*/
+		  color: green
+	  }
+
+	  #select-by-id strong { /*селектора има тежест id/class/tag 101 и override-ва правилата от предната секция по класове*/
+		  color: orange
+	  }
+
+	  #select-by-id .italic { /*селектора има тежест id/class/tag 110 и override-ва правилата от предната секция по класове*/
+		  font-style: normal;
+	  }
+
+	  #select-by-id h1#select-by-id-header { /*селектора има тежест id/class/tag 201 и override-ва правилата от предната секция по класове И #select-by-id h1 */ 
+		color: purple;
+		font-weight: bold;
+	  }
+
+    /*селектиране по атрибути*/
+
+    [title="Swift Academy FE Course"] { /*всеки елемент, който има атрибут title И стойност Swift Academy FE Course*/
+      font-size: 18px;
+      color: red
+    }
+
+    [title] { /*всеки елемент, който има атрибут title, този селектор и горния са равни по тежест и този презаписва размера на шрифта и цвета от горния */
+      font-size: 16px;
+      color: black
+    }
+
+    #link-with-id  { 
+      color: orange
+      
+    }
+
+    </style>
+  </head>
+  <body>
+    <!-- селектиране по таг -->
+    <section>
+      <h1>Селектиране по <strong>tag name</strong></h1>
+      <p>Lorem <strong>ipsum</strong> dolor sit amet</p>
+    </section>
+
+    <!-- селектиране по клас-->
+    <section>
+      <h1 class="italic uppercase">
+        Селектиране по <strong>class name</strong>
+      </h1>
+
+      <ol>
+        <li>
+          <p class="italic">Lorem <strong>ipsum</strong> dolor sit amet</p>
+        </li>
+        <li>
+          <p>Lorem <strong class="uppercase">ipsum</strong> dolor sit amet</p>
+        </li>
+        <li>
+          <p>Lorem <strong>ipsum</strong> dolor sit amet</p>
+        </li>
+      </ol>
+    </section>
+
+	<!--селектиране по id-->
+	<section id="select-by-id">
+		<h1 id="select-by-id-header" class="italic uppercase">
+		  Селектиране по <strong>ID name</strong>
+		</h1>
+		<h3>
+			като изключим този ред структурата/елементите и класовете са същите като на горната секция
+		</h2>
+  
+		<ol>
+		  <li>
+			<p class="italic">Lorem <strong>ipsum</strong> dolor sit amet</p>
+		  </li>
+		  <li>
+			<p>Lorem <strong class="uppercase">ipsum</strong> dolor sit amet</p>
+		  </li>
+		  <li>
+			<p>Lorem <strong>ipsum</strong> dolor sit amet</p>
+		  </li>
+		</ol>
+    </section>
+
+    <!--селектиране по атрибут-->
+    <section>
+      <h1>Селектиране по <strong>атрибут</strong></h1>
+      <a href="http://www.swift.bg" title="Swift Academy">Swift Academy</a>
+      <a href="http://www.swift.bg" title="Swift Academy FE Course">Swift Academy</a>
+      <a href="http://www.swift.bg" title="Swift Academy">Swift Academy</a>
+      <a href="http://www.swift.bg" title="Swift Academy">Swift Academy</a>
+      <a href="http://www.swift.bg" title="Swift Academy">Swift Academy</a>
+      <a id="link-with-id" href="http://www.swift.bg" title="Swift Academy">Swift Academy</a>
+    </section>
+  </body>
+</html>

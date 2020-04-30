@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Examples</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    
+    <style>
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            order: -1;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 7px;
+            box-shadow: none;
+            border : 1px solid #ccc;
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid royalblue;
+        }
+
+        .icon {
+            height: 30px;
+            width: 30px;
+            background-image: url(images/icon-sprite.jpg)
+        }
+
+        .icon-name {
+            background-position: -576px -1002px
+        }
+
+        input[type="text"]:focus ~ .icon-name {
+            background-position: -144px -1002px;
+        }
+
+        .icon-password {
+            background-position: -468px -1002px
+        }
+
+        input[type="password"]:focus ~ .icon-password {
+            background-position: -36px -1002px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- ICON SPRITE -->
+    <form action="">
+        <p>
+            <input type="text" name="name" id="name">
+            <label for="name" class="icon icon-name"></label>
+        </p>
+        <p>
+            <input type="password" name="password" id="password">
+            <label for="password" class="icon icon-password"></label>
+        </p>
+    </form>
+
+
+    <!-- ICON FONT -->
+    <!-- <p class="icon-font icon-apple"></p>
+    <p class="icon-font icon-windows"></p> -->
+</body>
+
+</html

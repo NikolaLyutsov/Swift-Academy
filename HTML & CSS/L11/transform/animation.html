@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animations</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+      }
+
+      section {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      div {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        background-color: #333;
+      }
+      div:hover {
+        animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+      /* keyframe animatciq */
+      @keyframes shake {
+        10%,
+        90% {
+          transform: scale(1.2) translate3d(-1px, 0, 0) rotate(10deg);
+        }
+
+        20%,
+        80% {
+          transform: scale(1.3) translate3d(2px, 0, 0) rotate(20deg);
+
+        }
+
+        30%,
+        50%,
+        70% {
+          transform: scale(1.4) translate3d(-4px, 0, 0) rotate(10deg);
+        }
+
+        40%,
+        60% {
+          transform:  scale(1.3) translate3d(4px, 0, 0) rotate(0);
+        }
+      }
+
+      img {
+        height: 100px;
+        position: relative;
+        /* animation-name: move-simple; */
+        animation-name: move-adv;
+        animation-duration: 6s;
+        /* skorost-vreme */
+        animation-timing-function: ease-in-out;
+        /* animation-delay: 1s; */
+        animation-iteration-count: infinite;
+        /* animation-direction:reverse; */
+        transition: all 0.15s;
+        transform: rotate(0)
+      }
+      @keyframes move-simple {
+        from {
+          left: 0;
+          top: 0;
+        }
+        to {
+          left: calc(100% - 155px);
+          top: calc(100% - 100px);
+        }
+      }
+
+      @keyframes move-adv {
+
+        0%,100% {
+          left: 0;
+          top: 0;
+          transform:rotate(0deg) scale(1)
+        }
+ 
+        25% {
+          left: calc(100% - 155px);
+          top: 0;
+          transform:rotate(90deg) scale(1.2)
+        }
+        50% {
+          left: calc(100% - 155px);
+          top: calc(100% - 100px);
+        }
+        80% {
+          left: 0;
+          top: calc(100% - 100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div></div> -->
+    <section>
+        <img src="images/turtle.png"  alt="">
+    </section>
+<!-- 
+    <ul>
+        <li>https://animista.net/</li>
+        <li>https://daneden.github.io/animate.css/</li>
+        <li></li>
+    </ul> -->
+  </body>
+</html>

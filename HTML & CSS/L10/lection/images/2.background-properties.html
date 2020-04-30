@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html, body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    div {
+        border: 1px solid #333;
+        height: 100vh;
+        width: 100vw;
+
+        background: forestgreen; /*short-hand за задаване на фон*/
+        background:  url(images/moon.png); /*можете да зададетеи цват и image, избягвайте да използвате само background и бъдете по специфични използвайки и стойности за останлите пропъртита*/
+
+
+        background-image: url(images/moon.png); 
+        /* background-image: url(images/moon.png), url(images/bg.jpg); */ /*можете да подадете референции към повече от една снимка*/
+
+
+        background-repeat: no-repeat;  /*това пропърти обозначава дали фоновото изображение да се повтаря или не*/
+        background-position: center right; /*задавате позиция на фоновото изображение по хоризонтала и вертикала*/
+        background-size: 200px 200px; 
+        
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>
